@@ -1,0 +1,32 @@
+{% extends 'master2.html' %}
+{% block mycontent %}
+
+<h1>Welcome to my Contact us page</h1>
+	<form method="post" action='/contact' onSubmit="alert('Your Form is succesfully submited!')"> 
+        {% csrf_token %}
+
+
+        <label for="name">First Name</label>
+
+        <input type='name' name='fname' id="name" placeholder="Enter first name"></br></br>
+
+         <label for="name">Last Name</label>
+
+        <input type='name' name='lname' id="name" placeholder="Enter last name" ></br></br>
+
+        <label for="name">Fees</label>
+
+        <input type="number" name='fees' id='fees'placeholder="Enter Student fees"></br></br>
+
+        <label for="name">Phone Number</label>
+
+        <input type="number" name='number' id='number'placeholder="Contact Number"></br></br>
+
+        <label for="name">Gender</label>
+
+        <input type="name" name='gender' id='gender'placeholder="male or female" ></br></br>
+        <button type="Submit" >Submit</button>
+    </form>
+
+ 
+{% endblock %}
